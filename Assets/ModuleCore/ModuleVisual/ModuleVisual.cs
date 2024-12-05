@@ -17,8 +17,8 @@ public abstract class ModuleVisual<Data> : MonoBehaviour {
     public abstract void ReleaseVisual(Data data);
 
     /// <summary> 创建可视化内容 </summary>
-    public void Create<T>(ref T value, Transform original, Transform parent) {
-        if (value != null) { return; }
+    public void Create<T>(ref T value, Transform original, Transform parent) where T : MonoBehaviour {
+        if (value != null && value.gameObject != null) { return; }
         Transform temp = CreateTransform(original, parent);
         value = temp.GetComponent<T>();
     }

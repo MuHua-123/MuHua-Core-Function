@@ -13,6 +13,8 @@ public abstract class ModuleAssets<Data> : MonoBehaviour {
     /// <summary> 核心模块 </summary>
     protected virtual ModuleCore ModuleCore => ModuleCore.I;
 
+    /// <summary> 更改事件 </summary>
+    public abstract event Action OnChange;
     /// <summary> 数据计数 </summary>
     public abstract int Count { get; }
     /// <summary> 数据列表 </summary>
@@ -26,4 +28,8 @@ public abstract class ModuleAssets<Data> : MonoBehaviour {
     public abstract Data Find(int index);
     /// <summary> 循环列表 </summary>
     public abstract void ForEach(Action<Data> action);
+    /// <summary> 保存数据 </summary>
+    public abstract void Save();
+    /// <summary> 加载数据 </summary>
+    public abstract void Load();
 }
