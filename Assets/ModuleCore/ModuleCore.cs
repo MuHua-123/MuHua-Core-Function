@@ -39,6 +39,11 @@ public class ModuleCore : Module<ModuleCore> {
     public ModuleUIPage CurrentPage;
     #endregion
 
+    #region 窗口模块
+    /// <summary> 色卡窗口 </summary>
+    public ModuleUIWindow<DataPalette> ColorCardWindow;
+    #endregion
+
     #region 独立模块
     /// <summary> Web请求模块 </summary>
     public ModuleSingle<UnitWebRequest> SingleWebRequest;

@@ -38,6 +38,8 @@ public class DataPatternDesignItem {
     public float rotate = 0;
     /// <summary> 颜色 </summary>
     public Color color = new Color(1, 1, 1, 1);
+    /// <summary> 规模锁定 </summary>
+    public bool isLock = false;
     /// <summary> 镜像X </summary>
     public bool isReverseX = false;
     /// <summary> 镜像Y </summary>
